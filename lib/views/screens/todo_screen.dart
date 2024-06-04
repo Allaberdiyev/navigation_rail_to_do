@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:navigation_rail/views/screens/home_screen.dart';
 import 'package:navigation_rail/views/screens/profile_screen.dart';
 import 'package:navigation_rail/views/screens/todo_screen.dart';
 
-class HomeScreen extends StatefulWidget {
-  HomeScreen({Key? key}) : super(key: key);
+class TodoScreen extends StatefulWidget {
+  TodoScreen({Key? key}) : super(key: key);
 
   @override
-  State<HomeScreen> createState() => _HomeScreenState();
+  State<TodoScreen> createState() => _TodoScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _TodoScreenState extends State<TodoScreen> {
   int _selectedIndex = 0;
 
   void _onItemTapped(int index) {
@@ -51,26 +52,7 @@ class _HomeScreenState extends State<HomeScreen> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                GestureDetector(
-                  onTap: () {
-                    _onItemTapped(0);
-                  },
-                  child: Container(
-                    height: 120,
-                    width: 100,
-                    color: Color.fromARGB(255, 234, 234, 234),
-                  ),
-                ),
-                GestureDetector(
-                  onTap: () {
-                    _onItemTapped(1);
-                  },
-                  child: Container(
-                    height: 120,
-                    width: 100,
-                    color: Color.fromARGB(255, 228, 228, 228),
-                  ),
-                ),
+                Text('ToDo'),
               ],
             ),
           ),
